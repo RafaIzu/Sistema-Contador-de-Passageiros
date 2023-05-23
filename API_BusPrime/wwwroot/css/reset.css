@@ -1,0 +1,126 @@
+:root {
+    --bs-border-width: 2px;
+    --primary: #012442;
+    --primary-light: #044074;
+    --primary-dark: #011a2e;
+    --grey: #171819;
+    --light: #dee2e69a;
+    --dark: #0d0d0d;
+    --blue: #011a2e;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+    font-family: 'Regular';
+    transition: .3s;
+    color: #212529;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    max-height: 100%;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.wrapper {
+    height: 100%;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 0;
+    transition-property: inherit;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-thin {
+    font-family: 'Light' !important;
+}
+
+.text-regular {
+    font-family: 'Regular' !important;
+}
+
+.text-light {
+    --bs-text-opacity: 1;
+    color: var(--light) !important;
+}
+
+.bg-blue {
+    background-color: #011a2e !important;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.bg-dark-hover {
+    background-color: var(--grey) !important;
+}
+
+.bg-grey {
+    background-color: var(--grey) !important;
+}
+
+a, a:hover {
+    text-decoration: none
+}
+
+.noty_theme__mint.noty_type__success {
+    background-color: #0a540a !important;
+    border-bottom: 1px solid #0a540a !important;
+}
+.noty_theme__mint.noty_type__error {
+    background-color: #aa0909 !important;
+    border-bottom: 1px solid #aa0909 !important;
+}
+.noty_theme__mint.noty_type__warning {
+    background-color: #c55409 !important;
+    border-bottom: 1px solid #c55409 !important;
+}
+.noty_theme__mint.noty_type__info {
+    background-color: var(--primary)!important;
+    border-bottom: 1px solid var(--primary) !important;
+}

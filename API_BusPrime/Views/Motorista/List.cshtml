@@ -1,0 +1,142 @@
+﻿@model ListView<IEnumerable<Motorista>>
+@{
+	ViewData["Title"] = "Motoristas";
+
+}
+<div class="content bg-dark-hover">
+	<div class="content-header">
+		<div class="d-flex align-items-center px-3 pb-3	">
+			<div class="header-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="currentColor" fill-rule="evenodd" d="M15 9.5c0-.438 4.516-3.5 9-3.5s9 3.063 9 3.5c0 1.56-.166 2.484-.306 2.987c-.093.33-.402.513-.745.513H16.051c-.343 0-.652-.183-.745-.513C15.166 11.984 15 11.06 15 9.5Zm7.5-.5a1 1 0 1 0 0 2h3a1 1 0 0 0 0-2h-3Zm-6.462 10.218c-3.33-1.03-2.49-2.87-1.22-4.218H33.46c1.016 1.298 1.561 3.049-1.51 4.097a8 8 0 1 1-15.912.12Zm7.69.782c2.642 0 4.69-.14 6.26-.384a6 6 0 1 1-11.98.069c1.463.202 3.338.315 5.72.315Zm8.689 14.6A9.992 9.992 0 0 0 24 30a9.992 9.992 0 0 0-8.42 4.602a2.49 2.49 0 0 0-1.447-1.05l-1.932-.517a2.5 2.5 0 0 0-3.062 1.767L8.363 37.7a2.5 2.5 0 0 0 1.768 3.062l1.931.518A2.492 2.492 0 0 0 14 41.006A1 1 0 0 0 16 41v-1c0-.381.027-.756.078-1.123l5.204 1.395a3 3 0 0 0 5.436 0l5.204-1.395c.051.367.078.742.078 1.123v1a1 1 0 0 0 2 .01c.56.336 1.252.453 1.933.27l1.932-.517a2.5 2.5 0 0 0 1.768-3.062l-.777-2.898a2.5 2.5 0 0 0-3.062-1.767l-1.932.517a2.49 2.49 0 0 0-1.445 1.046Zm-15.814 2.347A8.008 8.008 0 0 1 23 32.062v4.109a3.007 3.007 0 0 0-1.88 1.987l-4.517-1.21Zm14.794 0A8.009 8.009 0 0 0 25 32.062v4.109c.904.32 1.61 1.06 1.88 1.987l4.517-1.21ZM24 40a1 1 0 1 0 0-2a1 1 0 0 0 0 2Z" clip-rule="evenodd" /></svg>
+			</div>
+			<div class="header-title text-thin" style="margin-left: 0; ">
+				<h5>Motoristas</h5>
+			</div>
+			<div class="header-actions ms-auto">
+				<a class="btn btn-primary btn-rounded" asp-controller="motorista" asp-action="cadastrar">
+					Cadastrar  +
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="p-3">
+		<div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+			<p>
+				Exibindo
+				<select class="bg-dark text-white border-dark"
+						asp-for="@Model.take"
+						id="take"
+						onchange="window.location = `motorista?take=${$('#take').val()}&page=@Model.currentPage`">
+					@foreach (var item in Model.listOptions)
+					{
+						<option value="@item" onclick="console.log('oi')">
+							<a href="@Url.Action("list", new { take = item })">@item</a>
+						</option>
+					}
+				</select>
+				linhas de @Model.totalItems resultados
+			</p>
+
+			<p class="position-relative col-md-6 col-12 px-0">
+				<input type="search"
+					   id="filter-motoristas"
+					   class="form-control bg-dark text-white border-dark"
+					   style="padding-right: 80px"
+					   autocomplete="ok"
+					   value="@Model.searchFilter"
+					   onkeydown="filterTable(event, this, 'motorista?searchFilter=')" />
+				<span class="position-absolute pe-2 top-0 h-100 end-0 text-light d-flex align-items-center">
+					press enter
+				</span>
+			</p>
+		</div>
+		<div class="table-responsive">
+			<table id="table-motoristas" class="table table-dark border-c table-striped table-borderless table-hover">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">#</th>
+						<th scope="col">Nome</th>
+						<th scope="col">RG</th>
+						<th scope="col">CNH</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.list)
+					{
+						<tr>
+							<td></td>
+							<th scope="row">@item.Id</th>
+							<td>@item.Nome</td>
+							<td>@item.RG</td>
+							<td>@item.CNH</td>
+							<td>
+								<div class="d-flex">
+									<div class="dropdown">
+										<button type="button" class="btn dropdown-toggle"
+											id="dropdownMenuButton"
+											data-toggle="dropdown"
+											aria-haspopup="true"
+											aria-expanded="false"
+											onclick="$(this).find('.bi').toggle()">
+											<i class="bi bi-x" style="display: none"></i>
+											<i class="bi bi-three-dots"></i>
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="@Url.Action("editar", "motorista", new { id = item.Id })">Editar</a>
+											<button class="dropdown-item text-light"
+												data-toggle="modal"
+												data-target="#excluir"
+												onclick="excluir(this, '@Url.Action("delete", "motorista", new { id = item.Id })')">
+												Excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+		<ul class="pagination pagination-dark justify-content-end">
+			@for (int i = 1; i <= Model.totalPages; i++)
+			{
+				<li class="@(Model.currentPage == i ? "page-item active" : "page-item")">
+					<a class="page-link" href="@Url.Action("list", new { page = i, take = Model.take })">@i</a>
+				</li>
+			}
+		</ul>
+	</div>
+</div>
+<div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content bg-dark">
+			<div class="modal-header content-header bg-dark-hover">
+				<div class="d-flex align-items-center px-0	">
+					<div class="text-light">
+						<h5 class="mb-0 me-2">
+							<i class="bi bi-trash"></i>
+						</h5>
+					</div>
+					<div class="header-title text-thin" style="margin-left: 0; ">
+						<h6 class="modal-title">Excluir</h6>
+					</div>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Tem certeza que deseja excluir?</p>
+				<div class="d-flex justify-content-end">
+					<form method="post">
+						@Html.AntiForgeryToken()
+						<button type="submit" class="btn btn-primary btn-delete">Excluir</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

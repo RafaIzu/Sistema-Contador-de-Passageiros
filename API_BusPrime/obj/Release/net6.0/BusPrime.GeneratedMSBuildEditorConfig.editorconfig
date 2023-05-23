@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = BusPrime
+build_property.RootNamespace = BusPrime
+build_property.ProjectDir = D:\Noemi\Repo\BusPrime\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = D:\Noemi\Repo\BusPrime
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Noemi/Repo/BusPrime/Views/Contador/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFkb3JcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Motorista/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW90b3Jpc3RhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Motorista/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW90b3Jpc3RhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Motorista/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW90b3Jpc3RhXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Onibus/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25pYnVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Onibus/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25pYnVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Onibus/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT25pYnVzXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Noemi/Repo/BusPrime/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9q2rs0xb48

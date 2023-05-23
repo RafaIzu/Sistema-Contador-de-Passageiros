@@ -1,0 +1,143 @@
+﻿@model ListView<IEnumerable<Onibus>>
+@{
+	ViewData["Title"] = "Onibus";
+}
+
+<div class="content bg-dark-hover">
+	<div class="content-header">
+		<div class="d-flex align-items-center px-3 pb-3	">
+			<div class="header-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6c-1.11 0-2 .89-2 2v7h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2V8c0-1.11-.89-2-2-2H3m-.5 1.5h4V10h-4V7.5m5.5 0h4V10H8V7.5m5.5 0h4V10h-4V7.5m5.5 0h2.5V13L19 11V7.5m-13 6A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5Z" /></svg>
+			</div>
+			<div class="header-title text-thin" style="margin-left: 0; ">
+				<h5>Onibus</h5>
+			</div>
+			<div class="header-actions ms-auto">
+				<a class="btn btn-primary btn-rounded" asp-controller="onibus" asp-action="cadastrar">
+					Cadastrar
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="p-3">
+		<div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+			<p>
+				Exibindo
+				<select class="bg-dark text-white border-dark"
+						asp-for="@Model.take"
+						id="take"
+						onchange="window.location = `motorista?take=${$('#take').val()}&page=@Model.currentPage`">
+					@foreach (var item in Model.listOptions)
+					{
+						<option value="@item">
+							<a href="@Url.Action("list", new { take = item })">@item</a>
+						</option>
+					}
+				</select>
+				linhas de @Model.totalItems resultados
+			</p>
+
+			<p class="position-relative col-md-6 col-12 px-0">
+				<input type="search"
+					   id="filter-motoristas"
+					   class="form-control bg-dark text-white border-dark"
+					   style="padding-right: 80px"
+					   autocomplete="ok"
+					   value="@Model.searchFilter"
+					   onkeydown="filterTable(event, this, 'onibus?searchFilter=')" />
+				<span class="position-absolute pe-2 top-0 h-100 end-0 text-light d-flex align-items-center">
+					press enter
+				</span>
+			</p>
+		</div>
+		<div class="table-responsive">
+
+			<table id="table-motoristas" class="table table-dark border-c table-striped table-borderless table-hover table-lg table-md table-sm">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">#</th>
+						<th scope="col">Empresa</th>
+						<th scope="col">Placa</th>
+						<th scope="col">Número de Assentos</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.list)
+					{
+						<tr>
+							<td></td>
+							<th scope="row">@item.Id</th>
+							<td>@item.Empresa</td>
+							<td>@item.Placa</td>
+							<td>@item.NumeroAssentos</td>
+							<td>
+								<div class="d-flex">
+									<div class="dropdown">
+										<button type="button" class="btn dropdown-toggle"
+											id="dropdownMenuButton"
+											data-toggle="dropdown"
+											aria-haspopup="true"
+											aria-expanded="false"
+											onclick="$(this).find('.bi').toggle()">
+											<i class="bi bi-x" style="display: none"></i>
+											<i class="bi bi-three-dots"></i>
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="@Url.Action("editar", "onibus", new { id = item.Id })">Editar</a>
+											<button class="dropdown-item text-light"
+												data-toggle="modal"
+												data-target="#excluir"
+												onclick="excluir(this, '@Url.Action("delete", "onibus", new { id = item.Id })')">
+												Excluir
+											</button>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+		<ul class="pagination pagination-dark justify-content-end">
+			@for (int i = 1; i <= Model.totalPages; i++)
+			{
+				<li class="@(Model.currentPage == i ? "page-item active" : "page-item")">
+					<a class="page-link" href="@Url.Action("list", new { page = i, take = Model.take })">@i</a>
+				</li>
+			}
+		</ul>
+	</div>
+</div>
+<div class="modal fade" id="excluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content bg-dark">
+			<div class="modal-header content-header bg-dark-hover">
+				<div class="d-flex align-items-center px-0	">
+					<div class="text-light">
+						<h5 class="mb-0 me-2">
+							<i class="bi bi-trash"></i>
+						</h5>
+					</div>
+					<div class="header-title text-thin" style="margin-left: 0; ">
+						<h6 class="modal-title">Excluir</h6>
+					</div>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>Tem certeza que deseja excluir?</p>
+				<div class="d-flex justify-content-end">
+					<form method="post">
+						@Html.AntiForgeryToken()
+						<button type="submit" class="btn btn-primary btn-delete">Excluir</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

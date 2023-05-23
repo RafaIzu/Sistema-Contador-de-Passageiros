@@ -1,0 +1,49 @@
+﻿@model BusPrime.Models.Onibus
+
+@{
+	ViewData["Title"] = "Cadastrar novo";
+}
+
+<div class="content bg-dark  col-lg-6 col-md-8 col-12 m-auto">
+	<div class="content-header">
+		<div class="d-flex align-items-center px-3 pb-3	">
+			<div class="header-icon">
+				<i class="bi bi-plus"></i>
+			</div>
+			<div class="header-title text-thin" style="margin-left: 0; ">
+				<h5>Novo</h5>
+			</div>
+		</div>
+	</div>
+	<div class="content-body p-3">
+		<form method="post" asp-controller="onibus" asp-action="cadastrar" >
+			@Html.AntiForgeryToken()
+			@Html.HiddenFor(x => x.Id)
+			<div class="row">
+				<div class="form-group">
+					@Html.LabelFor(x => x.Empresa, new { @class = "control-label text-white"})
+					@Html.TextBoxFor(m => m.Empresa, new { @class = "form-control bg-dark-hover border-dark text-white", required = "required" })
+					@Html.ValidationMessageFor(x => x.Empresa, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					@Html.LabelFor(x => x.Placa, new { @class = "control-label text-white"})
+					@Html.TextBoxFor(m => m.Placa, new { @class = "form-control bg-dark-hover border-dark text-white", required = "required" })
+					@Html.ValidationMessageFor(x => x.Placa, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group">
+					@Html.LabelFor(x => x.NumeroAssentos, new { @class = "control-label text-white"})
+					@Html.TextBoxFor(m => m.NumeroAssentos, new { @class = "form-control bg-dark-hover border-dark text-white", required = "required"})
+					@Html.ValidationMessageFor(x => x.NumeroAssentos, "", new { @class = "text-danger" })
+				</div>
+			</div>
+			<div class="row px-2">
+				<button type="submit" class="btn btn-primary">Salvar</button>
+			</div>
+		</form>
+	</div>
+
+</div>

@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Electrolize';
+    src: url(./../fonts/Electrolize/Electrolize-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Condensed Bold';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-Bold.ttf);
+}
+@font-face {
+    font-family: 'Condensed BoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Condensed ExtraBold';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'Condensed ExtraBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Condensed Italic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-Italic.ttf);
+}
+@font-face {
+    font-family: 'Condensed Light';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-Light.ttf);
+}
+@font-face {
+    font-family: 'Condensed LightItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'Condensed Medium';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-Medium.ttf);
+}
+@font-face {
+    font-family: 'Condensed MediumItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'Condensed Regular';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'Condensed SemiBold';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Condensed SemiBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_Condensed-SemiBoldItalic.ttf);
+}
+
+
+@font-face {
+    font-family: 'SemiCondensed Bold';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed BoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed ExtraBold';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed ExtraBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed Italic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-Italic.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed Light';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-Light.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed LightItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed Medium';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-Medium.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed MediumItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed Regular';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed SemiBold';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'SemiCondensed SemiBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans_SemiCondensed-SemiBoldItalic.ttf);
+}
+
+
+@font-face {
+    font-family: 'Bold';
+    src: url(./../fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: 'BoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans-BoldItalic.ttf);
+}
+@font-face {
+    font-family: 'ExtraBold';
+    src: url(./../fonts/Open_Sans/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'ExtraBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: 'Italic';
+    src: url(./../fonts/Open_Sans/OpenSans-Italic.ttf);
+}
+@font-face {
+    font-family: 'Light';
+    src: url(./../fonts/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: 'LightItalic';
+    src: url(./../fonts/Open_Sans/OpenSans-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'Medium';
+    src: url(./../fonts/Open_Sans/OpenSans-Medium.ttf);
+}
+@font-face {
+    font-family: 'MediumItalic';
+    src: url(./../fonts/Open_Sans/OpenSans-MediumItalic.ttf);
+}
+@font-face {
+    font-family: 'Regular';
+    src: url(./../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'SemiBold';
+    src: url(./../fonts/Open_Sans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'SemiBoldItalic';
+    src: url(./../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf);
+}
