@@ -14,11 +14,11 @@
 
 <hr>
 
-<p>Neste repositório do GitHub estão depositados os códigos fontes
-tanto do microcontrolador quanto da API do trabalho de conclusão
-de Curso da turma de Sistemas de Informação do período noturno.
-Também está armazenado a documentação dos sistemas no arquivo 
-em formato PDF: <strong>README.pdf</strong>.</p>
+<p>Neste repositório estão depositados os códigos fontes
+tanto do microcontrolador (script "counter_iot.ino") quanto da API (diretório "API_BusPrime") do trabalho de conclusão
+do curso de Sistemas de Informação do período noturno.
+Também está armazenado a documentação dos sistemas em arquivos 
+em formato PDF. O arquivo <strong>Documentação hardware.pdf</strong> é a documentação do código da parte de hardware do sistema e o arquivo <strong>Documentação api.pdf</strong> da API.</p>
 <br>
 <p>Para quaisquer dúvidas, enviar um e-mail para:
 rafael.izukawa@aluno.faculdadeimpacta.com.br</p>
